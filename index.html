@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Touch</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 700px;
+            padding: 20px;
+        }
+
+        /* NEW LOGO SIZING */
+        img.logo {
+            width: 90%;
+            max-width: 480px;
+            margin-bottom: 28px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 38px;
+            color: #ffffffd8;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="email"] {
+            width: 85%;
+            max-width: 340px;
+            padding: 14px 16px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            margin-bottom: 12px;
+        }
+
+        button {
+            width: 85%;
+            max-width: 340px;
+            padding: 14px 16px;
+            font-size: 1rem;
+            font-weight: bold;
+            background: #ff2d2d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        button:hover {
+            background: #e12222;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- NEW LOGO -->
+        <img src="logo.png" class="logo" alt="Every Touch Logo">
+
+        <!-- TAGLINE -->
+        <p class="tagline">Player-centric video analysis for modern football.</p>
+
+        <!-- WAITLIST FORM -->
+        <form action="https://formspree.io/f/myzoqzrr" method="POST">
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="Enter your email…" 
+                required
+            >
+            <br>
+            <button type="submit">Join Waitlist</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
