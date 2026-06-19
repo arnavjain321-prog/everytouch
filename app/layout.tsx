@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EveryTouch — 90 minutes of match film, edited to your every touch",
+  title: "EveryTouch | 90 minutes of match film, edited to your every touch",
   description:
     "EveryTouch turns full match footage into a recruiter-ready highlight reel of every touch you take. Automatically. No editing skills required.",
   icons: { icon: "/logo.png" },

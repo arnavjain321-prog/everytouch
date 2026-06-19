@@ -41,8 +41,11 @@ export default function Home() {
             width={120}
             height={120}
             priority
-            className="mx-auto mb-10 w-24 h-auto sm:w-28"
+            className="mx-auto mb-4 w-24 h-auto sm:w-28"
           />
+          <p className="text-2xl sm:text-3xl font-semibold tracking-tight mb-10">
+            EveryTouch
+          </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
             90 minutes of match film,<br />
             edited to your every touch.
@@ -120,15 +123,15 @@ export default function Home() {
             {[
               {
                 title: "Runs on your Mac",
-                body: "No cloud upload. Your match film stays on your machine. Process a full match overnight — no monthly fees, no subscription, no streaming a 2 GB file to someone else's server.",
+                body: "No cloud upload. Your match film stays on your machine. Process a full match overnight. No monthly fees, no subscription, no streaming a 2 GB file to someone else's server.",
               },
               {
                 title: "Every touch, not just goals",
-                body: "Defenders, midfielders, goalkeepers — the moments that matter aren't always shots. EveryTouch finds every time the ball comes to you.",
+                body: "Defenders, midfielders, goalkeepers. The moments that matter aren't always shots. EveryTouch finds every time the ball comes to you.",
               },
               {
                 title: "AI-powered player ID",
-                body: "We identify you across the full match, even after substitutions, occlusions, and camera cuts. The hard ML problem is solved so you don't have to scrub timeline.",
+                body: "We identify you across the full match, even after substitutions, occlusions, and camera cuts. The hard ML problem is solved so you don't have to scrub the timeline.",
               },
               {
                 title: "Built by a player",
@@ -152,7 +155,7 @@ export default function Home() {
             Generate per-player reels for your whole team.
           </h2>
           <p className="text-lg text-[color:var(--muted)] leading-relaxed mb-8">
-            Upload one match. Export individual highlight reels for every player on your roster — automatically. Stop spending Sundays in Premiere. Give recruits the film they need to get to the next level.
+            Upload one match. Export individual highlight reels for every player on your roster, automatically. Stop spending Sundays in Premiere. Give recruits the film they need to get to the next level.
           </p>
           <a
             href="#waitlist"
@@ -176,7 +179,7 @@ export default function Home() {
             {[
               {
                 q: "How long does it take to process a full match?",
-                a: "On a consumer Apple Silicon Mac, a 90-minute match processes overnight — typically under 12 hours. Designed for batch processing, not interactive use. Drop your match before bed, get your reel in the morning.",
+                a: "On a consumer Apple Silicon Mac, a 90-minute match processes overnight, typically under 12 hours. Designed for batch processing, not interactive use. Drop your match before bed, get your reel in the morning.",
               },
               {
                 q: "What video formats are supported?",
@@ -196,7 +199,7 @@ export default function Home() {
               },
               {
                 q: "What does it cost?",
-                a: "Free during beta. We'll announce pricing closer to public launch — designed to be affordable for high school and college players, not enterprise-priced.",
+                a: "Free during beta. We'll announce pricing closer to public launch. Designed to be affordable for high school and college players, not enterprise-priced.",
               },
             ].map(({ q, a }) => (
               <details
