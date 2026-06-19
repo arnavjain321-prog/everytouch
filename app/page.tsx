@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/myzoqzrr";
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/everytouch" : "";
+const LOGO_SRC = `${BASE_PATH}/logo.png`;
 
 function WaitlistForm({ id }: { id: string }) {
   return (
@@ -36,7 +38,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-zinc-950" aria-hidden />
         <div className="relative max-w-3xl">
           <Image
-            src="/logo.png"
+            src={LOGO_SRC}
             alt="EveryTouch"
             width={120}
             height={120}
@@ -237,7 +239,7 @@ export default function Home() {
       <footer className="px-6 py-10 border-t border-white/5 bg-black">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/40">
           <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="" width={24} height={24} className="w-6 h-6" />
+            <Image src={LOGO_SRC} alt="" width={24} height={24} className="w-6 h-6" />
             <span>EveryTouch · {new Date().getFullYear()}</span>
           </div>
           <a
