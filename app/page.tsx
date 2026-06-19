@@ -40,15 +40,15 @@ export default function Home() {
           <Image
             src={LOGO_SRC}
             alt="EveryTouch"
-            width={120}
-            height={120}
+            width={240}
+            height={240}
             priority
-            className="mx-auto mb-4 w-24 h-auto sm:w-28"
+            className="mx-auto mb-5 w-40 h-auto sm:w-48 md:w-52 drop-shadow-[0_0_40px_rgba(255,45,45,0.15)]"
           />
-          <p className="text-2xl sm:text-3xl font-semibold tracking-tight mb-10">
+          <p className="text-xl sm:text-2xl font-semibold tracking-tight mb-12">
             EveryTouch
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.15] mb-6">
             90 minutes of match film,<br />
             edited to your every touch.
           </h1>
