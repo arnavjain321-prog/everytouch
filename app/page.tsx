@@ -198,7 +198,7 @@ export default function Home() {
               },
               {
                 title: "Built by a player",
-                body: "EveryTouch was built by a former D1 college player who lived the recruiting reel grind. Every design decision answers: would this have helped me get seen?",
+                body: "EveryTouch was built by a former Academy/Collegiate player who lived the recruiting reel grind. Every design decision answers: would this have helped me get seen?",
               },
             ].map(({ title, body }) => (
               <div key={title} className="p-6 rounded-lg border border-white/10 bg-black/40">
