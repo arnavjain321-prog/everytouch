@@ -5,6 +5,7 @@ const BASE_PATH = process.env.NODE_ENV === "production" ? "/everytouch" : "";
 const LOGO_SRC = `${BASE_PATH}/logo.png`;
 const REEL_SRC = `${BASE_PATH}/xavi_reel_720p.mp4`;
 const REEL_POSTER = `${BASE_PATH}/xavi_reel_poster.jpg`;
+const STATS_HEATMAP = `${BASE_PATH}/stats_heatmap.jpg`;
 
 function WaitlistForm({ id }: { id: string }) {
   return (
@@ -141,6 +142,33 @@ export default function Home() {
                 <p className="text-[color:var(--muted)] leading-relaxed">{body}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STATS — proof that this isn't just a glorified video editor.
+          Heatmap + KPI cards from the BFC vs GNK test run. Single
+          screenshot (77KB) is enough to communicate the analytics
+          layer without overloading the page. */}
+      <section className="px-6 py-24 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="uppercase text-xs tracking-[0.2em] text-[color:var(--accent)] mb-4">More than clips</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              The stats coaches actually look at.
+            </h2>
+            <p className="text-base sm:text-lg text-[color:var(--muted)] max-w-2xl mx-auto">
+              Pass completion, take-ons, recoveries, distance covered, and a position heatmap of every touch. Built in to every project. No extra tools, no spreadsheets.
+            </p>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60 bg-black">
+            <Image
+              src={STATS_HEATMAP}
+              alt="EveryTouch stats dashboard showing on-ball time, pass completion, recoveries, distance covered, and a touch heatmap on a pitch"
+              width={1600}
+              height={900}
+              className="block w-full h-auto"
+            />
           </div>
         </div>
       </section>
