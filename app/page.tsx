@@ -3,6 +3,8 @@ import Image from "next/image";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/myzoqzrr";
 const BASE_PATH = process.env.NODE_ENV === "production" ? "/everytouch" : "";
 const LOGO_SRC = `${BASE_PATH}/logo.png`;
+const REEL_SRC = `${BASE_PATH}/xavi_reel_720p.mp4`;
+const REEL_POSTER = `${BASE_PATH}/xavi_reel_poster.jpg`;
 
 function WaitlistForm({ id }: { id: string }) {
   return (
@@ -43,11 +45,8 @@ export default function Home() {
             width={240}
             height={240}
             priority
-            className="mx-auto mb-5 w-40 h-auto sm:w-48 md:w-52 drop-shadow-[0_0_40px_rgba(255,45,45,0.15)]"
+            className="mx-auto mb-10 w-40 h-auto sm:w-48 md:w-52 drop-shadow-[0_0_40px_rgba(255,45,45,0.15)]"
           />
-          <p className="text-xl sm:text-2xl font-semibold tracking-tight mb-12">
-            EveryTouch
-          </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.15] mb-6">
             90 minutes of match film,<br />
             edited to your every touch.
@@ -59,6 +58,40 @@ export default function Home() {
           <p className="mt-4 text-sm text-white/40">
             Free during beta · Limited spots
           </p>
+        </div>
+      </section>
+
+      {/* DEMO REEL — proof of product. A real auto-generated reel from a
+          15-min Barca U19 clip, tracking the right back. Muted +
+          autoPlay + loop + playsInline because that's the combination
+          most browsers will autoplay without user gesture; we also ship
+          a poster image so the section never appears empty while the
+          MP4 buffers. preload="metadata" keeps the page-load cost
+          small (only ~50KB until the user actually plays). */}
+      <section className="px-6 py-20 bg-zinc-950 border-t border-white/5">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="uppercase text-xs tracking-[0.2em] text-[color:var(--accent)] mb-4">See it work</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
+              60 seconds. Every touch.
+            </h2>
+            <p className="text-base sm:text-lg text-[color:var(--muted)] max-w-2xl mx-auto">
+              A real reel auto-generated from 15 minutes of a Barcelona U19 match, tracking the right back. No manual editing. Title card, freeze-circle highlights, music — all built by the app.
+            </p>
+          </div>
+          <div className="relative rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60 bg-black">
+            <video
+              src={REEL_SRC}
+              poster={REEL_POSTER}
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="block w-full h-auto"
+            />
+          </div>
         </div>
       </section>
 
@@ -181,7 +214,7 @@ export default function Home() {
             {[
               {
                 q: "How long does it take to process a full match?",
-                a: "On a consumer Apple Silicon Mac, a 90-minute match processes overnight, typically under 12 hours. Designed for batch processing, not interactive use. Drop your match before bed, get your reel in the morning.",
+                a: "Designed for batch processing — drop your match in, work on something else while it runs. A 15-minute clip processes in roughly the time it takes to watch it. Full 90-minute matches are designed to run overnight on a consumer Apple Silicon Mac.",
               },
               {
                 q: "What video formats are supported?",
